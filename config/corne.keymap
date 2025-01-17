@@ -73,7 +73,7 @@
             label = "TAP_DANCE_MO_LAYERS";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo LLYR>, <&to QLYR>, <&to q>;
+            bindings = <&mo LLYR>, <&to QLYR>, <&to SLYR>;
         };
     };
 
