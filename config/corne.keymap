@@ -25,7 +25,7 @@
 
 // ----------------------------------------------------------------------------|
 // |  0  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  10 |  11 |
-// |  12 |  12 |  14 |  15 |  16 |  17 |   |  18 |  19 |  20 |  21 |  22 |  23 |
+// |  12 |  13 |  14 |  15 |  16 |  17 |   |  18 |  19 |  20 |  21 |  22 |  23 |
 // |  24 |  25 |  26 |  27 |  28 |  29 |   |  30 |  31 |  32 |  33 |  34 |  35 |
 //                   |  36 |  37 |  38 |   |  39 |  40 |  41 |
 // ----------------------------------------------------------------------------|
@@ -39,29 +39,29 @@
             bindings = <&kp ESC>;
         };
 
-        combo_left_bspc {
-            timeout-ms = <50>;
-            key-positions = <27 28>;
-            bindings = <&kp BSPC>;
-        };
-
-        combo_left_tab {
-            timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&kp TAB>;
-        };
-
         combo_left_del {
             timeout-ms = <50>;
             key-positions = <3 4>;
             bindings = <&kp DEL>;
         };
 
+        combo_left_tab {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp TAB>;
+        };
+
         combo_left_home_tab {
             // lowered the timeout because it was being triggered too often
             timeout-ms = <20>;
-            key-positions = <19 20>;
+            key-positions = <15 16>;
             bindings = <&kp TAB>;
+        };
+
+        combo_left_bspc {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp BSPC>;
         };
 
     };
@@ -76,7 +76,7 @@
     };
 
     behaviors {
-        tdll: tap_dance_layer {
+        tdll: tap_dance_layer_left {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MO_LAYERS_LEFT";
             #binding-cells = <0>;
@@ -84,7 +84,7 @@
             bindings = <&mo LLYR>, <&to QLYR>, <&to SLYR>;
         };
 
-        tdlr: tap_dance_layer {
+        tdlr: tap_dance_layer_right {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MO_LAYERS_RIGHT";
             #binding-cells = <0>;
