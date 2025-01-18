@@ -19,7 +19,7 @@
 
 // mouse movement
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
 
 / {
 
@@ -76,12 +76,20 @@
     };
 
     behaviors {
-        tdl: tap_dance_layer {
+        tdll: tap_dance_layer {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MO_LAYERS";
+            label = "TAP_DANCE_MO_LAYERS_LEFT";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo LLYR>, <&to QLYR>, <&to SLYR>;
+        };
+
+        tdlr: tap_dance_layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_MO_LAYERS_RIGHT";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo RLYR>, <&mo NLYR>, <&to SLYR>;
         };
     };
 
@@ -101,7 +109,7 @@
  &none &kp Q       &kp W      &kp F       &kp P      &kp B            &kp J    &kp L      &kp U       &kp Y      &kp SEMI    &none
  &none &mt LSHFT A &mt LALT R &mt LCTRL S &mt LGUI T &kp G            &kp K    &mt LGUI N &mt LCTRL E &mt LALT I &mt LSHFT O &none
  &none &kp Z       &kp X      &kp C       &kp D      &kp V            &kp M    &kp H      &kp COMMA   &kp DOT    &kp FSLH    &none
-                              &kp BSPC    &tdl       &kp SPACE        &kp RET  &mo RLYR   &mo SLYR
+                              &kp BSPC    &tdll      &kp SPACE        &kp RET  &tdlr      &mo SLYR
             >;
         };
 
@@ -136,30 +144,39 @@
 // LCK MLT MDN MRT g    k  LGI LCT LAT RCK
 // z   x   c   d   v    h  BDN BUP .   /
 
+//        navigation_layer {
+//            bindings = <
+// &none &trans    &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN  &trans        &kp C_PP     &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT &none
+// &none &mkp LCLK &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans        &trans       &kp LGUI     &kp LCTRL    &kp LALT   &mkp RCLK  &none
+// &none &trans    &trans    &trans    &trans    &trans          &trans        &kp C_BRI_DN &kp C_BRI_UP &trans       &trans                &none
+//                                     &none     &trans          &trans        &kp C_MUTE   &trans       &none
+//            >;
+//        };
+
         navigation_layer {
             bindings = <
- &none &trans    &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN  &trans        &kp C_PP     &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT &none
- &none &mkp LCLK &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans        &trans       &kp LGUI     &kp LCTRL    &kp LALT   &mkp RCLK  &none
- &none &trans    &trans    &trans    &trans    &trans          &trans        &kp C_BRI_DN &kp C_BRI_UP &trans       &trans                &none
-                                     &none     &trans          &trans        &kp C_MUTE   &trans       &none
+ &none &kp C_PREV &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &trans            &kp C_PP &msc SCRL_UP   &msc SCRL_DOWN &trans          &trans       &none
+ &none &trans     &kp LALT   &kp LCTRL    &kp LGUI     &trans            &trans   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mmv MOVE_UP &none
+ &none &trans     &trans     &kp C_BRI_DN &kp C_BRI_UP &trans            &trans   &mkp LCLK      &trans         &trans          &mkp RCLK    &none
+                             &none        &trans       &kp C_MUTE        &trans   &trans         &none
             >;
         };
 
         qwerty_layer {
             bindings = <
- &none &kp Q &kp W &kp E &kp R    &kp T            &kp Y   &kp U  &kp I     &kp O   &kp P    &none
- &none &kp A &kp S &kp D &kp F    &kp G            &kp H   &kp J  &kp K     &kp L   &kp SEMI &none
- &none &kp Z &kp X &kp C &kp V    &kp B            &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &none
-                   &none &to BLYR &kp SPACE        &kp RET &trans &none
+ &none &kp Q &kp W &kp E &kp R    &kp T            &kp Y   &kp U    &kp I     &kp O   &kp P    &none
+ &none &kp A &kp S &kp D &kp F    &kp G            &kp H   &kp J    &kp K     &kp L   &kp SEMI &none
+ &none &kp Z &kp X &kp C &kp V    &kp B            &kp N   &kp M    &kp COMMA &kp DOT &kp FSLH &none
+                   &none &to BLYR &kp SPACE        &kp RET &mo RLYR &none
             >;
         };
 
         system_layer {
             bindings = <
  &none &bootloader &trans &trans &studio_unlock   &trans        &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &none
- &none &trans      &trans &trans &rgb_ug RGB_TOG   &trans        &trans &trans &trans &trans &trans &none
- &none &trans      &trans &trans &trans   &trans        &trans &trans &trans &trans &trans &none
-                          &none  &to BLYR &trans        &trans &trans &none
+ &none &trans      &trans &trans &rgb_ug RGB_TOG  &trans        &trans &trans &trans &trans &trans &none
+ &none &trans      &trans &trans &trans           &trans        &trans &trans &trans &trans &trans &none
+                          &none  &to BLYR         &trans        &trans &trans &none
             >;
         };
 
