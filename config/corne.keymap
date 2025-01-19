@@ -154,7 +154,6 @@
 // | NONE |  `  |  X  | BDN | BUP |  *  |   |  M  | LCL |  ,  |  .  |  /  | NONE |
 //                    | NON | BLR | MUT |   | BSP | NON | NON |
 // ------------------------------------------------------------------------------|
-        right_layer {
         navigation_layer {
             bindings = <
  &none &kp C_PREV &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &trans            &kp C_PP &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN  &trans    &none
