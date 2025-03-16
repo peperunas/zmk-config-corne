@@ -42,14 +42,14 @@
                 &none &kp Q       &kp W       &kp F       &kp P       &kp B            &kp J    &kp L       &kp U       &kp Y      &kp SQT     &none
                 &none &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp G            &kp M    &mt LSHFT N &mt LCTRL E &mt LALT I &mt LGUI O  &none
                 &none &kp Z       &mt RALT X  &kp C       &kp D       &kp V            &kp K    &kp H       &kp COMMA   &mt RALT DOT &kp FSLH  &none
-                                        &lt NAVLYR SPACE &lt MOUSELYR TAB &kp ESC            &lt SYSLYR ESC    &lt SYMLYR RET  &lt NUMLYR BSPC
-            >;
+                                       &kp ESC &lt NAVLYR SPACE &lt MOUSELYR TAB            &lt SYMLYR RET  &lt NUMLYR BSPC &lt SYSLYR ESC    
+            >
         };
 
         navigation_layer {
             display-name = "Navigation";
             bindings = <
-                &none &none      &none     &none       &none       &none            &none     &none     &kp UP    &none     &none      &none
+                &none &none      &none     &none       &none       &none            &none     &PG_UP     &kp UP   &PG_DOWN     &none      &none
                 &none &none      &none     &kp LC(V)   &kp LC(C)   &none            &kp CAPS  &kp LEFT  &kp DOWN  &kp RIGHT &none      &none
                 &none &none      &none     &none       &none       &none            &kp INS   &kp HOME  &none     &kp END   &none      &none
                                         &trans      &none       &none            &none     &kp RET   &kp BSPC
