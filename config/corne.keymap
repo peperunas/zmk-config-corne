@@ -13,10 +13,8 @@
 #define BASE 0  // Base layer
 #define NAVLYR 1    // Layer 1
 #define MOUSELYR 2    // Layer 2
-#define L3 3    // Layer 3
-#define NUMLYR 4    // Layer 4
-#define SYMLYR 5    // Layer 5
-#define L6 6    // Layer 6
+#define NUMLYR 3    // Layer 4
+#define SYMLYR 4    // Layer 5
 
 &led_strip {
     chain-length = <27>;
@@ -36,7 +34,7 @@
                 &none &kp Q       &kp W       &kp F       &kp P       &kp B            &kp J    &kp L       &kp U       &kp Y      &kp SQT     &none
                 &none &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp G            &kp M    &mt LSHFT N &mt LCTRL E &mt LALT I &mt LGUI O  &none
                 &none &kp Z       &mt RALT X  &kp C       &kp D       &kp V            &kp K    &kp H       &kp COMMA   &mt RALT DOT &kp FSLH  &none
-                                        &mt NAVLYR SPACE &mt MOUSELYR TAB &none            &none    &mt SYMLYR RET  &mt NUMLYR BSPC
+                                        &lt NAVLYR SPACE &lt MOUSELYR TAB &none            &none    &lt SYMLYR RET  &lt NUMLYR BSPC
             >;
         };
 
@@ -58,15 +56,6 @@
             >;
         };
 
-        layer_3 {
-            bindings = <
-                &none &bootloader &none     &none     &none      &none            &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &none
-                &none &kp LGUI    &kp LALT  &kp LCTRL &kp LSHFT  &none            &none           &kp C_PREV      &kp C_VOL_DN    &kp C_VOL_UP    &kp C_NEXT      &none
-                &none &none       &kp RALT  &none     &none      &none            &none           &none           &none           &none           &none           &none
-                                        &none     &none      &none            &none           &kp C_STOP      &kp C_PP
-            >;
-        };
-
         number_layer {
             bindings = <
                 &none &kp LBKT  &kp N7    &kp N8    &kp N9    &kp RBKT            &none    &none    &none    &none    &none    &none
@@ -82,15 +71,6 @@
                 &none &kp EXCL  &kp UNDER &kp COLON &kp CARET &kp DLLR           &kp AT    &kp LPAR  &kp RPAR  &kp UNDER &kp SEMI  &none
                 &none &kp PRCNT &kp QMARK &kp ASTRK &kp PLUS  &kp BSLH           &kp FSLH  &kp MINUS &kp LT    &kp GT    &kp DQT   &none
                                         &none     &none     &none              &none     &trans    &none
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-                &none &kp F12   &kp F7    &kp F8    &kp F9    &kp PSCRN           &none     &none      &none     &none      &bootloader &none
-                &none &kp F11   &kp F4    &kp F5    &kp F6    &kp SLCK            &none     &kp LSHFT  &kp LCTRL &kp LALT   &kp LGUI    &none
-                &none &kp F10   &kp F1    &kp F2    &kp F3    &kp PAUSE_BREAK     &none     &none      &none     &kp RALT   &none       &none
-                                        &kp SPACE &kp TAB   &none               &none     &none      &none
             >;
         };
     };
