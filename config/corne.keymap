@@ -36,7 +36,7 @@
                 &none &kp Q       &kp W       &kp F       &kp P       &kp B            &kp J    &kp L       &kp U       &kp Y      &kp SQT     &none
                 &none &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp G            &kp M    &mt LSHFT N &mt LCTRL E &mt LALT I &mt LGUI O  &none
                 &none &kp Z       &mt RALT X  &kp C       &kp D       &kp V            &kp K    &kp H       &kp COMMA   &mt RALT DOT &kp FSLH  &none
-                                        &lt L1 SPACE &lt L2 TAB &none            &none    &lt L5 RET  &lt L4 BSPC
+                                        &mt L1 SPACE &mt L2 TAB &none            &none    &mt L5 RET  &mt L4 BSPC
             >;
         };
 
