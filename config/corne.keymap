@@ -43,7 +43,7 @@
                 &none &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp G            &kp M    &mt LSHFT N &mt LCTRL E &mt LALT I &mt LGUI O  &none
                 &none &kp Z       &mt RALT X  &kp C       &kp D       &kp V            &kp K    &kp H       &kp COMMA   &mt RALT DOT &kp FSLH  &none
                                        &kp ESC &lt NAVLYR SPACE &lt MOUSELYR TAB            &lt SYMLYR RET  &lt NUMLYR BSPC &lt SYSLYR ESC    
-            >
+            >;
         };
 
         navigation_layer {
