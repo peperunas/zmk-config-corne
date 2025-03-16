@@ -11,11 +11,11 @@
 
 // Define layers to match QMK
 #define BASE 0  // Base layer
-#define L1 1    // Layer 1
-#define L2 2    // Layer 2
+#define NAVLYR 1    // Layer 1
+#define MOUSELYR 2    // Layer 2
 #define L3 3    // Layer 3
-#define L4 4    // Layer 4
-#define L5 5    // Layer 5
+#define NUMLYR 4    // Layer 4
+#define SYMLYR 5    // Layer 5
 #define L6 6    // Layer 6
 
 &led_strip {
@@ -36,11 +36,11 @@
                 &none &kp Q       &kp W       &kp F       &kp P       &kp B            &kp J    &kp L       &kp U       &kp Y      &kp SQT     &none
                 &none &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp G            &kp M    &mt LSHFT N &mt LCTRL E &mt LALT I &mt LGUI O  &none
                 &none &kp Z       &mt RALT X  &kp C       &kp D       &kp V            &kp K    &kp H       &kp COMMA   &mt RALT DOT &kp FSLH  &none
-                                        &mt L1 SPACE &mt L2 TAB &none            &none    &mt L5 RET  &mt L4 BSPC
+                                        &mt NAVLYR SPACE &mt MOUSELYR TAB &none            &none    &mt SYMLYR RET  &mt NUMLYR BSPC
             >;
         };
 
-        layer_1 {
+        navigation_layer {
             bindings = <
                 &none &none      &none     &none       &none       &none            &none     &none     &kp UP    &none     &none      &none
                 &none &none      &none     &kp LC(V)   &kp LC(C)   &none            &kp CAPS  &kp LEFT  &kp DOWN  &kp RIGHT &none      &none
@@ -49,7 +49,7 @@
             >;
         };
 
-        layer_2 {
+        mouse_layer {
             bindings = <
                 &none &none     &none     &none     &none      &none            &none       &kp PG_UP  &mmv MOVE_UP   &kp PG_DN    &none       &none
                 &none &none     &none     &kp V     &kp LC(C)  &none            &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
@@ -67,7 +67,7 @@
             >;
         };
 
-        layer_4 {
+        number_layer {
             bindings = <
                 &none &kp LBKT  &kp N7    &kp N8    &kp N9    &kp RBKT            &none    &none    &none    &none    &none    &none
                 &none &kp SEMI  &kp N4    &kp N5    &kp N6    &kp EQUAL           &none    &none    &none    &none    &none    &none
@@ -76,7 +76,7 @@
             >;
         };
 
-        layer_5 {
+        symbol_layer {
             bindings = <
                 &none &kp GRAVE &kp TILDE &kp HASH  &kp AMPS  &kp PIPE           &kp CARET &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &none
                 &none &kp EXCL  &kp UNDER &kp COLON &kp CARET &kp DLLR           &kp AT    &kp LPAR  &kp RPAR  &kp UNDER &kp SEMI  &none
