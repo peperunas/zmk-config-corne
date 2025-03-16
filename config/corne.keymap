@@ -22,7 +22,12 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping_term_ms = <190>; // leave at 190
+    tapping_term_ms = <150>; // leave at 190
+};
+
+&lt {
+    flavor = "tap-preferred";
+    tapping_term_ms = <150>; // leave at 190
 };
 
 / {
@@ -30,6 +35,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "Base";
             bindings = <
                 &none &kp Q       &kp W       &kp F       &kp P       &kp B            &kp J    &kp L       &kp U       &kp Y      &kp SQT     &none
                 &none &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp G            &kp M    &mt LSHFT N &mt LCTRL E &mt LALT I &mt LGUI O  &none
@@ -39,6 +45,7 @@
         };
 
         navigation_layer {
+            display-name = "Navigation";
             bindings = <
                 &none &none      &none     &none       &none       &none            &none     &none     &kp UP    &none     &none      &none
                 &none &none      &none     &kp LC(V)   &kp LC(C)   &none            &kp CAPS  &kp LEFT  &kp DOWN  &kp RIGHT &none      &none
@@ -48,6 +55,7 @@
         };
 
         mouse_layer {
+            display-name = "Mouse";
             bindings = <
                 &none &none     &none     &none     &none      &none            &none       &kp PG_UP  &mmv MOVE_UP   &kp PG_DN    &none       &none
                 &none &none     &none     &kp V     &kp LC(C)  &none            &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
@@ -57,6 +65,7 @@
         };
 
         number_layer {
+            display-name = "Numbers";
             bindings = <
                 &none &kp LBKT  &kp N7    &kp N8    &kp N9    &kp RBKT            &none    &none    &none    &none    &none    &none
                 &none &kp SEMI  &kp N4    &kp N5    &kp N6    &kp EQUAL           &none    &none    &none    &none    &none    &none
@@ -66,6 +75,7 @@
         };
 
         symbol_layer {
+            display-name = "Symbols";
             bindings = <
                 &none &kp GRAVE &kp TILDE &kp HASH  &kp AMPS  &kp PIPE           &kp CARET &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &none
                 &none &kp EXCL  &kp UNDER &kp COLON &kp CARET &kp DLLR           &kp AT    &kp LPAR  &kp RPAR  &kp UNDER &kp SEMI  &none
