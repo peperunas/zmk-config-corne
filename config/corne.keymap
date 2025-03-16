@@ -53,7 +53,7 @@
             bindings = <
                 &none &none     &none     &none     &none      &none            &none       &kp PG_UP  &mmv MOVE_UP   &kp PG_DN    &none       &none
                 &none &none     &none     &kp V     &kp LC(C)  &none            &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
-                &none &none     &none     &none     &none      &none            &none       &mwh SCROLL_UP &none &mwh SCROLL_DOWN &none      &none
+                &none &none     &none     &none     &none      &none            &none       &msc SCRL_UP &none &msc SCRL_DOWN &none      &none
                                         &none     &trans     &none            &none       &mkp LCLK   &mkp RCLK
             >;
         };
