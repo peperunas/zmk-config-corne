@@ -28,23 +28,6 @@
 };
 
 / {
-    // Add combos for functions that would normally be on additional keys
-    combos {
-        compatible = "zmk,combos";
-        
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <3 4>; // F and P keys
-            bindings = <&lt L3 ESC>;
-        };
-        
-        combo_del {
-            timeout-ms = <50>;
-            key-positions = <8 9>; // U and Y keys
-            bindings = <&lt L6 DEL>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
