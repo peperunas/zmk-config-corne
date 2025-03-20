@@ -24,12 +24,12 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping_term_ms = <135>; // leave at 190
+    tapping_term_ms = <100>; // leave at 190
 };
 
 &lt {
     flavor = "tap-preferred";
-    tapping_term_ms = <135>; // leave at 190
+    tapping_term_ms = <100>; // leave at 190
 };
 
 / {
