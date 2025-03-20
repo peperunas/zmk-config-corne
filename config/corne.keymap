@@ -79,7 +79,7 @@
         symbol_layer {
             display-name = "Symbols";
             bindings = <
-                &none &kp GRAVE &kp TILDE &kp HASH  &kp AMPS  &kp PIPE           &kp CARET &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &none
+                &none &kp GRAVE &kp TILDE &kp HASH  &kp AMPS  &kp PIPE           &kp APOS &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &none
                 &none &kp EXCL  &kp UNDER &kp COLON &kp CARET &kp DLLR           &kp AT    &kp LPAR  &kp RPAR  &kp UNDER &kp SEMI  &none
                 &none &kp PRCNT &kp QMARK &kp ASTRK &kp PLUS  &kp BSLH           &kp FSLH  &kp MINUS &kp LT    &kp GT    &kp DQT   &none
                                         &none     &none     &none              &none     &trans    &none
