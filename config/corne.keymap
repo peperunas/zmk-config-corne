@@ -50,7 +50,7 @@
             display-name = "Navigation";
             bindings = <
                 &none &none      &none     &none       &none       &none            &none     &kp PG_UP     &kp UP   &kp PG_DN     &none      &none
-                &none &none      &none     &kp LC(V)   &kp LC(C)   &none            &kp CAPS  &kp LEFT  &kp DOWN  &kp RIGHT &none      &none
+                &none &trans      &trans     &trans &trans   &none            &kp CAPS  &kp LEFT  &kp DOWN  &kp RIGHT &none      &none
                 &none &none      &none     &none       &none       &none            &kp INS   &kp HOME  &none     &kp END   &none      &none
                                         &trans      &none       &none            &none     &kp RET   &kp BSPC
             >;
@@ -60,7 +60,7 @@
             display-name = "Mouse";
             bindings = <
                 &none &none     &none     &none     &none      &none            &none       &kp PG_UP  &mmv MOVE_UP   &kp PG_DN    &none       &none
-                &none &none     &none     &kp V     &kp LC(C)  &none            &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
+                &none &trans     &trans     &trans     &trans  &none            &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
                 &none &none     &none     &none     &none      &none            &none       &msc SCRL_UP &none &msc SCRL_DOWN &none      &none
                                         &none     &trans     &none            &none       &mkp LCLK   &mkp RCLK
             >;
